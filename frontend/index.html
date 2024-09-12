@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARK</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Movie Database</h1>
+
+  
+  <!-- Movie input form -->
+  <form id="movie-form">
+    <label for="name">Movie/Web Series Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="type">Type:</label>
+    <select id="type" name="type" required>
+      <option value="Movie">Movie</option>
+      <option value="Web Series">Web Series</option>
+    </select>
+
+    <label for="platform">OTT Platform:</label>
+    <select id="platform" name="platform" required>
+      <option value="Prime Video">Prime Video</option>
+      <option value="Netflix">Netflix</option>
+      <option value="Aha">Aha</option>
+      <option value="Zee5">Zee5</option>
+      <option value="Hotstar">Hotstar</option>
+      <option value="SonyLiv">SonyLiv</option>
+      <option value="ETV Win">ETV Win</option>
+      <option value="JioCinema">JioCinema</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <!-- Hidden input field for custom OTT platform -->
+    <div id="other-platform-container" style="display:none;">
+      <label for="other-platform">Enter Custom OTT Platform:</label>
+      <input type="text" id="other-platform" name="other-platform">
+    </div>
+
+    <button type="submit">Add Entry</button>
+  </form>
+
+  <!-- Button to Go to Weekend Watchlist -->
+  <div class="watchlist-btn-container">
+    <button id="watchlist-btn" onclick="window.location.href='watchlist.html'">Go to Weekend Watchlist</button>
+  </div>
+
+
+  <!-- Movie/Web Series list -->
+  <h2>Movie/Web Series List</h2>
+  <table id="movie-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>OTT Platform</th>
+        <th>Date Added</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Entries will go here -->
+    </tbody>
+  </table>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
